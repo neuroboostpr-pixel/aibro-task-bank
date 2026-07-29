@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Банк AI-задач — обратная связь</title>
+<style>
+:root{--bg:#0b0f17;--card:#151d2b;--line:#26324a;--ink:#e8eef7;--mut:#93a3bd;--dim:#6b7c99;
+--a:#4aa8ff;--g:#5ad19a;--p:#b98cff;--w:#ffb454;--mono:ui-monospace,Menlo,Consolas,monospace;
+--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.5}
+a{color:var(--a);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:40px 0 18px;border-bottom:1px solid var(--line);
+background:radial-gradient(700px 260px at 12% -30%,rgba(185,140,255,.14),transparent)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--p)}
+h1{font-size:clamp(23px,3.5vw,34px);margin:8px 0 6px;letter-spacing:-.02em}
+.lead{color:var(--mut);max-width:760px;margin:0}
+.back{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12.5px}
+.how{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:20px 0}
+.how h2{font-size:15px;margin:0 0 8px}
+.how .row{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0;font-size:13.5px;color:var(--mut)}
+.pill{font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 30px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;border-left:3px solid var(--p)}
+.q .n{font-family:var(--mono);font-size:11px;color:var(--dim)}
+.q h3{font-size:15.5px;margin:4px 0 6px}
+.q p{margin:0 0 8px;color:var(--mut);font-size:13.5px}
+.q .now{font-size:12.5px;color:var(--dim)}
+.q .now b{color:var(--g)}
+.send{background:linear-gradient(90deg,rgba(90,209,154,.1),transparent);border:1px solid var(--line);
+border-left:3px solid var(--g);border-radius:12px;padding:14px 18px;margin:6px 0 40px}
+.send b{color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:18px 0 50px;color:var(--dim);font-size:12.5px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="wrap">
+<div class="eyebrow">AIBRO · банк AI-задач · обратная связь</div>
+<h1>Что улучшить в банке задач</h1>
+<p class="lead">Это структура, по которой удобно собрать подробную обратную связь: пройди по блокам и скажи, чего не хватает и что банк должен уметь ещё. Отвечать можно прямо по номерам блоков.</p>
+<a class="back" href="./">← сам банк задач (обновляется каждый день)</a>
+</div></header>
+<div class="wrap">
+
+<div class="how">
+<h2>Как это сейчас работает (чтобы было от чего отталкиваться)</h2>
+<div class="row"><span class="pill">источники</span> конкурентские Telegram-каналы и комментарии · Reddit · Hacker News · GitHub · наши посты</div>
+<div class="row"><span class="pill">отбор</span> конкретная задача + повторяется у ЦА + есть реальный источник + ложится в формат простых задач</div>
+<div class="row"><span class="pill">жизнь задачи</span> 🧩 в банке → ✍️ выбрана в контент → ✅ раскрыта (не удаляется, можно вернуться другим углом)</div>
+<div class="row"><span class="pill">обновление</span> каждый день, автоматически, без ручной работы</div>
+</div>
+
+<div class="grid">
+<div class="q"><div class="n">01</div><h3>Источники</h3><p>Какие ещё площадки мониторить, чтобы ловить спрос? Форумы, чаты, отзовики, поисковые запросы, конкретные каналы.</p><div class="now">сейчас: <b>TG-конкуренты, Reddit, HN, GitHub</b></div></div>
+<div class="q"><div class="n">02</div><h3>Поля в карточке</h3><p>Каких данных не хватает по каждой задаче, чтобы решить брать её в контент?</p><div class="now">сейчас: <b>статус, актуальность, фит, CtxEng, сегмент, кейс, источник, где раскрывали</b></div></div>
+<div class="q"><div class="n">03</div><h3>Фильтры и срезы</h3><p>Какие фильтры добавить? Например, по сегменту ЦА, по формату (пост/рилс/карусель), по «есть кейс / нет кейса».</p><div class="now">сейчас: <b>Все · 🔥 актуальные · 🧪 на кейс · в банке · выбраны · раскрыты + поиск</b></div></div>
+<div class="q"><div class="n">04</div><h3>Критерии отбора</h3><p>Что поменять в правиле «что попадает / что нет»? Может, что-то сейчас проскакивает лишнее или наоборот теряется.</p><div class="now">сейчас: <b>4 условия входа + стоп-лист</b></div></div>
+<div class="q"><div class="n">05</div><h3>Новые типы задач</h3><p>Какие конкретные задачи ЦА важны, а их в банке пока нет? Назови своими словами, я заведу.</p><div class="now">сейчас: <b>30 типов задач</b></div></div>
+<div class="q"><div class="n">06</div><h3>Приоритеты</h3><p>Как считать «актуальность» и что считать «горячим»? По частоте упоминаний, по свежести, по сегменту?</p><div class="now">сейчас: <b>по частоте и свежести упоминаний</b></div></div>
+<div class="q"><div class="n">07</div><h3>Вывод и уведомления</h3><p>Нужна ли рассылка «топ задач недели», выгрузка в таблицу, пинг в чат при новой горячей задаче?</p><div class="now">сейчас: <b>страница по ссылке</b></div></div>
+<div class="q"><div class="n">08</div><h3>Что мешает</h3><p>Что в таблице неудобно или лишнее? Что убрать, чтобы стало проще пользоваться?</p><div class="now">сейчас: <b>таблица + фильтры</b></div></div>
+</div>
+
+<div class="send"><b>Как прислать обратную связь:</b> ответь по номерам блоков (можно коротко, тезисами) в чат или Кириллу в личку. По твоим ответам обновлю банк и то, как он собирает задачи.</div>
+
+<footer>AIBRO · СММщик · страница для структурированной обратной связи по банку AI-задач.</footer>
+</div></body></html>
