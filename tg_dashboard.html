@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TG Аналитика @kirillbezikov | 24 июля — 2 августа 2026</title>
+<style>
+  :root {
+    --bg: #0f1117; --surface: #1a1d27; --surface2: #232635; --border: #2e3148;
+    --text: #e8eaf0; --muted: #8b8fa8; --accent: #6c7bff;
+    --green: #34d399; --yellow: #fbbf24; --red: #f87171; --blue: #60a5fa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.5; padding: 24px; }
+  h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+  .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; }
+  .tile-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .tile-value { font-size: 28px; font-weight: 700; line-height: 1; }
+  .tile-sub { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .tile-value.green { color: var(--green); }
+  .tile-value.yellow { color: var(--yellow); font-size: 18px; }
+  .tile-value.blue { color: var(--blue); }
+  .section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-bottom: 20px; }
+  .section-title { font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+  .bar-row { display: grid; grid-template-columns: 210px 1fr 52px; align-items: center; gap: 12px; margin-bottom: 9px; }
+  .bar-label { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right; }
+  .bar-track { background: var(--surface2); border-radius: 4px; height: 22px; position: relative; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 11px; font-weight: 600; color: #fff; white-space: nowrap; }
+  .bar-er { font-size: 13px; font-weight: 700; text-align: right; }
+  .er-high { background: #059669; } .er-mid { background: #4f46e5; } .er-low { background: #475569; }
+  .ev-high { color: var(--green); } .ev-mid { color: #a5b4fc; } .ev-low { color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; padding: 8px 12px; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--surface2); }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .rank { color: var(--muted); font-size: 12px; font-weight: 600; }
+  .post-type { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 500; }
+  .t-инструмент { background: #1e3a5f; color: var(--blue); }
+  .t-практика   { background: #1a3d2e; color: var(--green); }
+  .t-подборка   { background: #2d2a1a; color: var(--yellow); }
+  .t-кейс       { background: #2a1f3d; color: #a78bfa; }
+  .t-новость    { background: #1f2a3d; color: #93c5fd; }
+  .t-дайджест   { background: #1f2222; color: var(--muted); }
+  .t-мнение     { background: #2a2020; color: #fca5a5; }
+  .t-реакция    { background: #2a201f; color: #fdba74; }
+  .t-медиа      { background: #1e1e2a; color: #c4b5fd; }
+  .er-badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+  .badge-high { background: #14532d; color: var(--green); }
+  .badge-mid  { background: #1e1b4b; color: #a5b4fc; }
+  .badge-low  { background: #1c1c28; color: var(--muted); }
+  .fwd-hi { color: var(--green); font-weight: 700; }
+  .hyp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hyp-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .hyp-num { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
+  .hyp-title { font-size: 13px; font-weight: 600; margin-bottom: 5px; }
+  .hyp-body { font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .hyp-proof { margin-top: 8px; font-size: 11px; background: var(--surface); border-radius: 6px; padding: 6px 10px; color: var(--text); border-left: 3px solid var(--accent); }
+</style>
+</head>
+<body>
+<h1>TG Аналитика @kirillbezikov</h1>
+<p class="subtitle">24 июля — 2 августа 2026 · 14 постов · данные: Telethon</p>
+
+<div class="tiles">
+  <div class="tile"><div class="tile-label">Средний ER</div><div class="tile-value green">3.07%</div><div class="tile-sub">(репосты + реакции) / просмотры</div></div>
+  <div class="tile"><div class="tile-label">Средние просмотры</div><div class="tile-value blue">658</div><div class="tile-sub">за пост, медиана недели</div></div>
+  <div class="tile"><div class="tile-label">Лидер ER</div><div class="tile-value yellow">Screenpipe</div><div class="tile-sub">5.94% · 589 просм · 26 репостов</div></div>
+  <div class="tile"><div class="tile-label">Всего репостов</div><div class="tile-value">159</div><div class="tile-sub">48 из них у топ-2 постов</div></div>
+</div>
+
+<div class="section">
+  <div class="section-title">Engagement Rate по постам — сортировка по ER ↓</div>
+  <div id="chart"></div>
+</div>
+
+<div class="section">
+  <div class="section-title">Все посты — детальная таблица</div>
+  <table>
+    <thead><tr>
+      <th>#</th><th>Дата</th><th>Тип</th><th>Заголовок</th>
+      <th class="num">Просм</th><th class="num">Репост</th><th class="num">Реакц</th><th class="num">ER%</th>
+    </tr></thead>
+    <tbody id="table-body"></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-title">Гипотезы по результатам</div>
+  <div class="hyp-grid">
+    <div class="hyp-card">
+      <div class="hyp-num">Гипотеза 1</div>
+      <div class="hyp-title">Утренние посты дают лучший ER</div>
+      <div class="hyp-body">Посты до 11:00 стабильно выше среднего ER. Вечерние (16–17ч) слабее — даже при сильном контенте.</div>
+      <div class="hyp-proof">Screenpipe 08:51 → 5.94% · 5 задач 09:06 → 5.56% · GitHub 10:29 → 4.69%<br>vs Три вещи 16:32 → 1.73% · ChatGPT Work 16:36 → 3.50%</div>
+    </div>
+    <div class="hyp-card">
+      <div class="hyp-num">Гипотеза 2</div>
+      <div class="hyp-title">Инструмент + конкретная задача = вирус репостов</div>
+      <div class="hyp-body">Посты с формулой "вот инструмент → вот что он решает" дают больше всего репостов. Сохраняют полезное, а не мнения.</div>
+      <div class="hyp-proof">Screenpipe: 26 репостов · 5 задач: 22 · GitHub: 18<br>vs Дайджест: 3 · Opus 5 разбор: 7</div>
+    </div>
+    <div class="hyp-card">
+      <div class="hyp-num">Гипотеза 3</div>
+      <div class="hyp-title">Высокие просмотры ≠ высокий ER</div>
+      <div class="hyp-body">Первые посты дня набирают просмотры за счёт времени в ленте, но ER у них ниже. Охват и вовлечённость — разные метрики.</div>
+      <div class="hyp-proof">Пост 2879: 890 просм → 2.47% · Opus 5 юмор: 886 просм → 1.69%<br>vs Screenpipe: 589 просм → 5.94%</div>
+    </div>
+    <div class="hyp-card">
+      <div class="hyp-num">Гипотеза 4</div>
+      <div class="hyp-title">Дайджест читают, но не распространяют</div>
+      <div class="hyp-body">Понедельный дайджест: 701 просмотр, всего 3 репоста, ER 1.57% — один из худших. Формат информирует, но не цепляет.</div>
+      <div class="hyp-proof">Дайджест 27.07: 701 просм · 3 репоста · 8 реакций · ER 1.57%<br>Проверить: добавить CTA с вопросом или конкретным советом</div>
+    </div>
+    <div class="hyp-card">
+      <div class="hyp-num">Гипотеза 5</div>
+      <div class="hyp-title">GitHub-подборка: репосты без реакций</div>
+      <div class="hyp-body">18 репостов (3-й результат) но только 7 реакций. Сохраняют как библиотеку — эмоций нет. Разные цели у одной аудитории.</div>
+      <div class="hyp-proof">GitHub: 18 репостов, 7 реакций<br>vs Лимиты: 11 репостов, 14 реакций</div>
+    </div>
+    <div class="hyp-card">
+      <div class="hyp-num">Гипотеза 6</div>
+      <div class="hyp-title">Мнение/рефлексия работает хуже практики</div>
+      <div class="hyp-body">"Три вещи которые ИИ делает лучше/хуже" — ER 1.73%, 12-е из 14. Аудитория выбирает "что делать" вместо "что думаю".</div>
+      <div class="hyp-proof">Три вещи: ER 1.73% · vs 5 задач: ER 5.56%<br>Схожая аудитория, разный угол</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const posts = [
+  {id:2892,date:'02.08 10:25',views:388,fwd:8,reac:9,title:'(без текста — фото/видео)',type:'медиа'},
+  {id:2891,date:'01.08 16:36',views:571,fwd:9,reac:11,title:'ChatGPT научился работать, а не только отвечать',type:'инструмент'},
+  {id:2890,date:'31.07 16:22',views:595,fwd:8,reac:11,title:'Работа с документами через ИИ — без кода',type:'практика'},
+  {id:2889,date:'31.07 10:29',views:533,fwd:18,reac:7,title:'Топ-5 репозиториев с GitHub за эту неделю',type:'подборка'},
+  {id:2888,date:'30.07 16:32',views:577,fwd:4,reac:6,title:'Три вещи которые ИИ делает лучше / хуже',type:'мнение'},
+  {id:2887,date:'30.07 08:51',views:589,fwd:26,reac:9,title:'Screenpipe: ИИ который наблюдает за работой',type:'инструмент'},
+  {id:2886,date:'29.07 09:06',views:612,fwd:22,reac:12,title:'5 задач которые ИИ закроет за тебя сегодня',type:'практика'},
+  {id:2885,date:'28.07 16:26',views:651,fwd:9,reac:8,title:'Rowboat: разобрал переписку с клиентом',type:'кейс'},
+  {id:2884,date:'28.07 11:54',views:682,fwd:7,reac:9,title:'Opus 5 вышел: что с этим делать',type:'новость'},
+  {id:2883,date:'27.07 14:22',views:701,fwd:3,reac:8,title:'Понедельный дайджест 20–26 июля',type:'дайджест'},
+  {id:2882,date:'26.07 11:19',views:775,fwd:11,reac:14,title:'Лимиты ChatGPT и Claude: что это и 5 приёмов',type:'практика'},
+  {id:2881,date:'25.07 10:56',views:762,fwd:12,reac:4,title:'LobeHub: один пульт для всей агентной команды',type:'инструмент'},
+  {id:2880,date:'24.07 17:04',views:886,fwd:9,reac:6,title:'Вышел Opus 5, выходные отменяются 😂',type:'реакция'},
+  {id:2879,date:'24.07 15:45',views:890,fwd:13,reac:9,title:'(без текста — видео/медиа)',type:'медиа'},
+];
+posts.forEach(p => p.er = +((p.fwd+p.reac)/p.views*100).toFixed(2));
+const sorted = [...posts].sort((a,b)=>b.er-a.er);
+const MAX_ER = sorted[0].er;
+
+const chart = document.getElementById('chart');
+sorted.forEach(p => {
+  const pct = (p.er/MAX_ER*100).toFixed(1);
+  const cls = p.er>=4.5?'er-high':p.er>=2.5?'er-mid':'er-low';
+  const vc  = p.er>=4.5?'ev-high':p.er>=2.5?'ev-mid':'ev-low';
+  const lbl = p.title.length>40?p.title.slice(0,40)+'…':p.title;
+  chart.innerHTML += `<div class="bar-row" title="${p.title} | ${p.date}">
+    <div class="bar-label">${lbl}</div>
+    <div class="bar-track"><div class="bar-fill ${cls}" style="width:${pct}%">↗${p.fwd} ❤${p.reac}</div></div>
+    <div class="bar-er ${vc}">${p.er}%</div>
+  </div>`;
+});
+
+const tbody = document.getElementById('table-body');
+sorted.forEach((p,i) => {
+  const bc = p.er>=4.5?'badge-high':p.er>=2.5?'badge-mid':'badge-low';
+  const fc = p.fwd>=15?'fwd-hi':'';
+  const ttl = p.title.length>50?p.title.slice(0,50)+'…':p.title;
+  tbody.innerHTML += `<tr>
+    <td class="rank num">${i+1}</td>
+    <td style="color:var(--muted);font-size:12px;white-space:nowrap">${p.date}</td>
+    <td><span class="post-type t-${p.type}">${p.type}</span></td>
+    <td>${ttl}</td>
+    <td class="num">${p.views.toLocaleString('ru')}</td>
+    <td class="num ${fc}">${p.fwd}</td>
+    <td class="num">${p.reac}</td>
+    <td class="num"><span class="er-badge ${bc}">${p.er}%</span></td>
+  </tr>`;
+});
+</script>
+</body>
+</html>
